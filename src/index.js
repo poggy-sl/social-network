@@ -20,6 +20,7 @@ export let rerenderEntireTree = (state) => {
         dispatch = {
             store.dispatch.bind(store)
         }
+        store={store}
         />
     </BrowserRouter>
 );
