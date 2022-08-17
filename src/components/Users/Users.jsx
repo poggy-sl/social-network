@@ -5,19 +5,20 @@ import userPhoto from "../../assets/images/png-icon.png";
 
 
 let Users = (props) => {
-    if(props.users.length === 0){
 
-    axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
-        props.setUsers(response.data.items);
-    })
-    // props.setUsers([
-    //         // {id: 1, followed: false, photoUrl: 'https://mir-optik.ru/i/Stati/tony.png', fullName: 'Dmitriy', status: 'I`m a boss', location: {city: 'Minsk', country: 'Belarus'}},
-    //         // {id: 2, followed: true, photoUrl: 'https://mir-optik.ru/i/Stati/tony.png', fullName: 'Sasha', status: 'I`m a boss too', location: {city: 'Moscow', country: 'Russia'}},
-    //         // {id: 3, followed: false, photoUrl: 'https://mir-optik.ru/i/Stati/tony.png', fullName: 'Andrew', status: 'I`m a boss too', location: {city: 'Kiev', country: 'Ukraine'}}
-    //     ])
+    let getUsers = () =>
+    {
+        if (props.users.length === 0) {
+        axios
+            .get("https://social-network.samuraijs.com/api/1.0/users")
+            .then((response) => {
+            props.setUsers(response.data.items);
+            });
+        }
     }
-    
+
     return <div>
+        <button onClick={getUsers}>Get Users</button>
         {
             props.users.map(u => <div key={u.id}>
                 <span>
