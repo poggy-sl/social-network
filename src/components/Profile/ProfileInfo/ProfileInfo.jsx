@@ -1,5 +1,6 @@
 import Preloader from '../../common/preloader/Preloader';
 import s from "./ProfileInfo.module.css";
+import ProfileStatus from './ProfileStatus';
 
 
 const ProfileInfo = (props) => {
@@ -9,12 +10,12 @@ const ProfileInfo = (props) => {
 
   return (
     <div>
-      <div>
+      {/* <div>
         <img src="https://img.freepik.com/free-vector/atomic-science-technology-background-vector-border-blue-neon-style-with-blank-space_53876-125999.jpg"></img>
-      </div>
+      </div> */}
       <div className={s.descriptionBlock}>
         <img src={props.profile.photos.large}></img>
-        ava + description
+        <ProfileStatus status={"Hello, my friends!"}/>
         </div>
       
     </div>
