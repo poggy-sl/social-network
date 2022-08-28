@@ -1,10 +1,10 @@
 .header {
     grid-area: h;
-    background-color: midnightblue;
+    background-color: rgb(223, 223, 224);
 }
 
 .header img {
-    width: 40px;
+    width: 90px;
 }
 
 .loginBlock{
@@ -12,5 +12,5 @@
 }
 
 .loginBlock a{
-    color: white;
+    color: rgb(1, 2, 50);
 }
