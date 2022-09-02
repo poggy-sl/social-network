@@ -6,7 +6,7 @@ import {required, maxLength10} from '../../../utils/validators/validators';
 import {Textarea} from '../../common/FormControls/FormsControls';
 
 
-const MyPosts = (props) => {
+const MyPosts = React.memo(props => {
 
   let postsElements = props.posts.map( p => 
     <Post message={p.message} likes={p.likesCount} key={p.key} />
@@ -25,7 +25,7 @@ const MyPosts = (props) => {
       </div>
     </div>
   );
-};
+});
 
 const AddNewPostForm = (props) => {
   return (
