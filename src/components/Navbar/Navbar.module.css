@@ -7,8 +7,17 @@
 .item a{
     color:white;
     text-decoration: none;
+    padding: 20px;
+}
+
+.item{
+    margin: 10px 0px;
 }
 
 .item a:focus {
+    color: rgb(4, 48, 115);
+}
+
+.item a:hover{
     color: rgb(4, 48, 115);
 }
