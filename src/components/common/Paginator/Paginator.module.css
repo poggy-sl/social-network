@@ -1,3 +1,42 @@
 .selectedPage {
     font-weight: bold;
 }
+
+.paginator{
+    margin: 0px 20px 20px 0px;
+    text-align: center;
+}
+
+.paginator button{
+    border-radius: 50px;
+    border: 1px;
+    font-weight: 600;
+    color: black;
+    box-shadow: 0 4px 6px rgb(65 132 144 / 10%),
+    0 1px 3px rgba(0, 0, 0, 0.467);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.678);
+}
+
+.buttonPaginator:hover{
+    transition: all 0.2s;
+    box-shadow: 0 7px 14px rgb(65 132 144 / 10%),
+    0 3px 6px rgb(0 0 0 / 8%);
+    color: #fff;
+    background-color: rgb(232, 230, 230);
+}
+
+.pageNumber {
+    padding: 2px;
+    margin: 1px;
+    cursor: pointer;
+}
+
+.pageNumber:hover{
+    color:#fff;
+}
+
+.pageNumber .selectedPage {
+    font-weight: bold;
+    border-color: black;
+}
