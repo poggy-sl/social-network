@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import {  Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
@@ -13,7 +13,6 @@ import { compose } from "redux";
 import { connect } from "react-redux";
 import {initializeApp} from './redux/app-reducer';
 import Preloader from './components/common/preloader/Preloader';
-import { BrowserRouter } from 'react-router-dom';
 import {Provider} from 'react-redux';
 import store from './redux/redux-store';
 const ProfileContainer = React.lazy(() => import ('./components/Profile/ProfileContainer'));
@@ -68,11 +67,11 @@ let AppContainer = compose(
   (App);
 
   const SamuraiJSApp = (props) => {
-    return <BrowserRouter>
+    return <HashRouter>
         <Provider store={store}>
             <AppContainer />
         </Provider>
-    </BrowserRouter>
+    </HashRouter> 
   }
 
   export default SamuraiJSApp;
