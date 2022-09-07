@@ -2,3 +2,19 @@
     padding: 10px;
 }
 
+.photoChange{
+    opacity: 1;
+    position: absolute;
+    top: 70px;
+    height: 250px;
+    width: 250px;
+}
+
+.mainPhoto {
+    max-width: 250px;
+}
+
+.photoChange{
+    cursor: pointer;
+}
+
