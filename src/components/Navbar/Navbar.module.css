@@ -7,7 +7,8 @@
 .item a{
     color:white;
     text-decoration: none;
-    padding: 20px;
+    padding: 5px;
+    
 }
 
 .item{
@@ -19,5 +20,5 @@
 }
 
 .item a:hover{
-    color: rgb(4, 48, 115);
+    color: rgba(17, 84, 185, 0.811);
 }

@@ -1,7 +1,28 @@
 .postsBlock{
-    padding: 10px;
+    padding: 20px;
 }
 
 .posts{
     margin-top: 10px;
+}
+
+.enterPost{
+    border-radius: 10px;
+    box-shadow: 0px 7px 14px rgba(1, 5, 63, 0.1),
+    10px 8px 10px rgb(20 40 80 / 8%);
+    border: transparent;
+}
+
+.addPostButton{
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    font-weight: bold;
+    text-transform:uppercase;
+    background-color:rgb(184, 187, 187);
+    margin: 10px 0px;
+    box-shadow: 0px 7px 14px rgba(1, 5, 63, 0.1),
+    10px 8px 10px rgb(20 40 80 / 8%);
 }

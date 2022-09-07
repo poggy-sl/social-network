@@ -31,10 +31,10 @@ const AddNewPostForm = (props) => {
   return (
     <form onSubmit={props.handleSubmit}>
         <div>
-          <Field component={Textarea} name="newPostText" placeholder="Enter new post..." validate={[required, maxLength10]} />
+          <Field className={s.enterPost} component={Textarea} name="newPostText" placeholder="Enter new post..." validate={[required, maxLength10]} />
         </div>
         <div>
-          <button>Add post</button>
+          <button className={s.addPostButton}>Add post</button>
         </div>
       </form>
   )
