@@ -1,5 +1,15 @@
 .descriptionBlock{
     padding: 20px;
+    order:1;
+}
+
+.profileInfoBlock{
+    order: 2;
+    padding: 20px;
+}
+
+.mainProfileBlock{
+    display: flex;
 }
 
 .photoChange{

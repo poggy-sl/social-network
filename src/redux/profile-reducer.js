@@ -116,9 +116,21 @@ export const saveProfile = (profile) => async (dispatch, getState) => {
     if (response.data.resultCode === 0) {
         dispatch(getUserProfile(userId));
     } else {
-        dispatch(stopSubmit('edit-profile', {_error: response.data.messages[0]}))
-        return Promise.reject(response.data.messages[0])
-    }
+        let wrongNetwork = response.data.messages[0]
+            .slice(
+                response.data.messages[0].indexOf(">") + 1,
+                response.data.messages[0].indexOf(")")
+            )
+            .toLocaleLowerCase();
+        dispatch(
+            stopSubmit("edit-profile", {
+                contacts: {
+                    [wrongNetwork]: response.data.messages[0]
+                }
+            })
+        );
+        return Promise.reject(response.data.messages[0]);
+        }
 }
 
 

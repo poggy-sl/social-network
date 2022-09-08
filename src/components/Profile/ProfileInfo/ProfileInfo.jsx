@@ -28,7 +28,7 @@ const onSubmit =  (formData) => {
 
 
   return (
-    <div>
+    <div className={s.mainProfileBlock}>
       <div className={s.descriptionBlock}>
         <img src={profile.photos.large || userPhoto} className={s.mainPhoto}></img>
         { isOwner && 
@@ -37,10 +37,12 @@ const onSubmit =  (formData) => {
           <input type={"file"} onChange={onMainPhotoSelected} ref={refInput} style={{display: 'none'}} />
         </div>
           }
+        <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
+        </div>
+        <div className={s.profileInfoBlock}>
           { editMode 
           ? <ProfileDataForm initialValues={profile} onSubmit={onSubmit} profile={profile}/> 
           : <ProfileData goToEditMode={() => {setEditMode(true)}} profile={profile} isOwner={isOwner}/>}
-        <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
         </div>
     </div>
   );
@@ -48,7 +50,7 @@ const onSubmit =  (formData) => {
 
 const ProfileData = ({profile, isOwner, goToEditMode}) => {
   return <div>
-    {isOwner && <div><button onClick={goToEditMode}>edit</button></div>}
+    {isOwner && <div><button onClick={goToEditMode}>Edit profile information</button></div>}
     <div>
       <b>Full name</b> : {profile.fullName}
     </div>
