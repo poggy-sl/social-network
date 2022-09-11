@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
@@ -39,6 +39,7 @@ class App extends Component {
         <div className="app-wrapper-content">
           <React.Suspense fallback = {<Preloader />}>
             <Routes>
+                <Route path="/" element={<Navigate to="/profile" />} />
                 <Route path="/dialogs/*" element={<DialogsContainer />} />
                 <Route path="/profile/:userId" element={<ProfileContainer />} />
                 <Route path="/profile/" element={<ProfileContainer />} />
@@ -47,8 +48,9 @@ class App extends Component {
                 <Route path="/news" element={<News/>} />
                 <Route path="/music" element={<Music/>} />
                 <Route path="/settings" element={<Settings/>} />
+                <Route path="*" element={<div>404 NOT FOUND</div>} />
             </Routes>
-          </React.Suspense>
+          </React.Suspense> 
         </div> 
       </div>
   );

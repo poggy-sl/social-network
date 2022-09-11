@@ -26,7 +26,6 @@ const onSubmit =  (formData) => {
   }
 
 
-
   return (
     <div className={s.mainProfileBlock}>
       <div className={s.descriptionBlock}>
@@ -50,7 +49,7 @@ const onSubmit =  (formData) => {
 
 const ProfileData = ({profile, isOwner, goToEditMode}) => {
   return <div>
-    {isOwner && <div><button onClick={goToEditMode}>Edit profile information</button></div>}
+    {isOwner && <div><button className={s.buttonEdit} onClick={goToEditMode}>Edit profile information</button></div>}
     <div>
       <b>Full name</b> : {profile.fullName}
     </div>

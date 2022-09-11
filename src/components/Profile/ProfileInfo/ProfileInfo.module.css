@@ -1,15 +1,27 @@
 .descriptionBlock{
     padding: 20px;
     order:1;
+    flex-basis: 30%;
+}
+
+.statusInput{
+    word-break: normal;
 }
 
 .profileInfoBlock{
     order: 2;
     padding: 20px;
+    flex-basis: 70%;
 }
 
 .mainProfileBlock{
     display: flex;
+    padding: 10px 20px;
+    box-shadow: 0px 7px 14px rgba(1, 5, 63, 0.1),
+    10px 8px 10px rgb(20 40 80 / 8%);
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 20px;
 }
 
 .photoChange{
@@ -22,6 +34,7 @@
 
 .mainPhoto {
     max-width: 250px;
+    border-radius: 20px;
 }
 
 .photoChange{
@@ -30,5 +43,21 @@
 
 .contact{
     padding-left: 10px;
+}
+
+.buttonEdit{
+    border: 1px solid rgba(17, 84, 185, 0.811);
+    color: rgba(17, 84, 185, 0.811);
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin: 0px 0px 20px 0px;
+    background-color: #fff;
+}
+
+.buttonEdit:hover{
+    border: 1px solid rgba(17, 84, 185, 0.811);
+    background-color: rgba(17, 84, 185, 0.811);
+    color: #fff;
 }
 

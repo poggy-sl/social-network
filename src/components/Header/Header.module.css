@@ -1,14 +1,25 @@
 .header {
     grid-area: h;
-    background-color: rgb(223, 223, 224);
+    border-radius: 5px;
+    box-shadow: 0px 7px 4px rgba(1, 5, 63, 0.1),
+    0px 8px 10px rgb(20 40 80 / 8%);
+    color: white;
+    background-image: url(https://funart.pro/uploads/posts/2021-04/1617474287_25-p-oboi-goluboi-fon-s-oblakami-25.jpg);
+}
+
+.signOut{
+    cursor: pointer;
+    padding-right: 30px;
 }
 
 .header img {
     width: 90px;
+    padding-left: 20px;
 }
 
 .loginBlock{
     float: right;
+    padding: 15px;
 }
 
 .loginBlock a{
