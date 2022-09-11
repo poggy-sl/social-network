@@ -2,6 +2,7 @@ import React from 'react';
 import userPhoto from "../../assets/images/png-icon.png";
 import styles from './users.module.css';
 import {NavLink} from "react-router-dom";
+import s from '../Profile/MyPosts/MyPosts.module.css';
 
 let User = ({user, followingInProgress, follow, unfollow}) => {
 
@@ -15,11 +16,11 @@ let User = ({user, followingInProgress, follow, unfollow}) => {
                     <div>
                         {user.followed 
 
-                        ? <button disabled={followingInProgress.some(id => id === user.id)} onClick={() => {
+                        ? <button className={s.addPostButton} disabled={followingInProgress.some(id => id === user.id)} onClick={() => {
                             unfollow(user.id);
                             }}>Unfollow</button> 
         
-                        : <button disabled={followingInProgress.some(id => id === user.id)} onClick={() => {
+                        : <button className={s.addPostButton} disabled={followingInProgress.some(id => id === user.id)} onClick={() => {
                             follow(user.id);
                         }}>Follow</button>
                         }

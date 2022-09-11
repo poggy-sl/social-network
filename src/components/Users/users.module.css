@@ -1,8 +1,19 @@
 .userPhoto{
     height: 100px;
     width: 100px;
+    margin: 0px 20px;
 }
 
 .userContainer{
     margin: 40px;
+    box-shadow: 0px 7px 14px rgba(1, 5, 63, 0.1),
+    10px 8px 10px rgb(20 40 80 / 8%);
+    padding: 20px;
+    text-align: center;
+}
+
+.containerMain{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
